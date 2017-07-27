@@ -28,7 +28,7 @@
                     }
 
                     // COUNT NUMBER OF FILMS
-                    $query2="SELECT  id FROM films";
+                    $query2="SELECT  id,popularity FROM films WHERE popularity>=10";
                     $count_films=mysqli_query($connection,$query2);
                     confirmQuery($count_films);
                     $count = mysqli_num_rows($count_films);
