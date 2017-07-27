@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Start Bootstrap</a>
+            <a class="navbar-brand" href="index.php">Home</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -17,17 +17,17 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>Movies <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Popular</a>
+                            <a href="popular.php"><i class="fa fa-fw fa-user"></i> Popular</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-fw fa-envelope"></i> Top Rated</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> Upcoming</a>
+                            <a href="upcoming.php"><i class="fa fa-fw fa-gear"></i> Upcoming</a>
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Now Playing</a>
+                            <a href="nowplaying.php"><i class="fa fa-fw fa-power-off"></i> Now Playing</a>
                         </li>
                     </ul>
                 </li>
@@ -35,6 +35,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> TV Shows <b class="caret"></b></a>
                     <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> All</a>
+                        </li>
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Popular</a>
                         </li>
@@ -49,10 +53,6 @@
                             <a href="#"><i class="fa fa-fw fa-power-off"></i>Airing Today</a>
                         </li>
                     </ul>
-                </li>
-
-                <li>
-                    <a href="#">Genre</a>
                 </li>
             </ul>
         </div>
