@@ -186,7 +186,7 @@
                         <img class="img-responsive" src="images/GOTH/<?php  echo $show_image; ?>" > <hr>
                         <h3> Overview </h3>
                         <?php echo $show_overview; ?><br><br>
-                        <a  class="btn btn-primary" href="tv_post.php?view_season=<?php echo $the_tvshow_id; ?>">View all season <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a  class="btn btn-primary" href="seasons.php?view_season=<?php echo $the_tvshow_id; ?>">View all season <span class="glyphicon glyphicon-chevron-right"></span></a>
             <?php
                     }
                 }
