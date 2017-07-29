@@ -9,6 +9,12 @@
     <div class="container">
 
         <div class="row">
+        <!-- Blog Sidebar Widgets Column -->
+        <?php include 'includes/sidebar.php'; ?>
+        </div>
+
+
+        <div class="row">
 
             <!-- Blog Entries Column -->
             <div class="col-md-8">
@@ -59,8 +65,6 @@
 
             </div>
 
-            <!-- Blog Sidebar Widgets Column -->
-            <?php include 'includes/sidebar.php'; ?>
 
         </div>
         <!-- /.row -->
