@@ -14,9 +14,10 @@
 
         <div class="row">
             <?php
-            if ($_GET['season_id'])
+            if (isset($_GET['season_id']) && isset($_GET['tvshow_id']))
             {
                 $the_season_id=$_GET['season_id'];
+                $the_tvshow_id=$_GET['tvshow_id'];
             }
             ?>
             <!-- SEASON IMAGE -->
@@ -39,7 +40,9 @@
                     $episode_year = $row['released_date'];
                     ?>
                     <h3><?php echo $episode_number; ?> <?php echo $episode_name .' '. $episode_year; ?> </h3>
-                    <a href="episodes.php?episode_id=<?php echo $episode_id; ?>"><img width="40%"  class="img-responsive" src="images/GOTH/<?php echo $episode_image; ?> "></a>
+                    <a href="episode_info.php?episode_id=<?php echo $episode_id; ?>&season_id=<?php echo $the_season_id; ?>&tvshow_id=<?php echo $the_tvshow_id; ?>">
+                        <img width="40%"  class="img-responsive" src="images/GOTH/<?php echo $episode_image; ?> ">
+                    </a>
 
                     <h3>Overview </h3>
                     <?php echo $episode_overview; ?><hr>
