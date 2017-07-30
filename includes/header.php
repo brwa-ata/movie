@@ -1,3 +1,16 @@
+<?php ob_start();  ?>
+<?php
+    session_start();
+    if (isset($_GET['destroy']))
+    {
+
+        $_SESSION['username']=null; // batal krdnaway session yan cancel krdny session
+        $_SESSION['user_id']=null;
+        $_SESSION['user_role']=null;
+
+        header("Location: ../index.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
