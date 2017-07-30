@@ -45,7 +45,7 @@
 
                         <tbody>
                             <?php
-                                $sql="SELECT * FROM users WHERE user_role != 'admin'";
+                                $sql="SELECT * FROM users";
                                 $select_users=mysqli_query($connection,$sql);
                                 if(!$select_users)
                                 {
