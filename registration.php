@@ -1,5 +1,6 @@
 <?php  include "includes/db_connection.php"; ?>
 <?php  include "includes/header.php"; ?>
+<?php include "admin/functions.php"; ?>
 
 <?php
 if (isset($_POST['submit']))
@@ -24,7 +25,7 @@ if (isset($_POST['submit']))
         }
         else
         {
-            header("Location: /Movie/admin");
+            header("Location: loginform.php");
         }
     }
 }
