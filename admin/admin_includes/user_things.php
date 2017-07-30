@@ -12,7 +12,7 @@
                     </div>
                 </div>
             </div>
-            <a href="posts.php">
+            <a href="index.php?favorite=<?php echo $_SESSION['user_id']; ?>">
                 <div class="panel-footer">
                     <span class="pull-left">View Favorite</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </div>
-            <a href="comments.php">
+            <a href="index.php?watchlist=<?php echo $_SESSION['user_id']; ?>">
                 <div class="panel-footer">
                     <span class="pull-left">View Watchlist</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
