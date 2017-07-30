@@ -1,3 +1,4 @@
+<h3>Favorite</h3>
 <table class="table table-bordered table-hover">
 
     <thead>
