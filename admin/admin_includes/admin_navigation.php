@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">SB Admin</a>
+        <a class="navbar-brand" href="index.php">Admin Office</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -22,8 +22,11 @@
             <ul class="dropdown-menu">
 
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                    <a href="edit_profile.php"><i class="fa fa-fw fa-user"></i> Edit Profile</a>
                 </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                </li >
 
                 <li class="divider"></li>
                 <li>
