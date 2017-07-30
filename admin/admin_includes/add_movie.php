@@ -19,8 +19,8 @@
 
             move_uploaded_file($temp_image,"../images/$film_image");
 
-            $sql="INSERT INTO films (video_title, overview, budget, revenue, duration, image) 
-                  VALUES ('$film_title','$film_overview',$film_budget,$film_revenue,$film_duration,'$film_image')";
+            $sql="INSERT INTO films (video_title,released_date ,overview, budget, revenue, duration, image) 
+                  VALUES ('$film_title', '$film_released_date' ,'$film_overview',$film_budget,$film_revenue,$film_duration,'$film_image')";
             $insert_film=mysqli_query($connection,$sql);
             confirmQuery($insert_film);
 
@@ -43,7 +43,7 @@
             // INSERT PRODUCTION COMPANY
             foreach ($_POST['company'] as $pro_company)
             {
-                $company_query="INSERT INTO production_country (company_name, films_id)
+                $company_query="INSERT INTO production_company (company_name, films_id)
                                 VALUES ('$pro_company' , $new_film_id)";
                 $insert_country=mysqli_query($connection,$company_query);
             }
