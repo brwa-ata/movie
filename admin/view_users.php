@@ -1,5 +1,5 @@
 <?php include 'admin_includes/admin_header.php'; ?>
-
+<?php include "admin_includes/admin_function.php"; ?>
 
 <div id="wrapper">
 
@@ -45,7 +45,7 @@
 
                         <tbody>
                             <?php
-                                $sql="SELECT * FROM users";
+                                $sql="SELECT * FROM users WHERE user_role != 'admin'";
                                 $select_users=mysqli_query($connection,$sql);
                                 if(!$select_users)
                                 {
@@ -65,15 +65,52 @@
                                         echo "<td>$user_gender</td>";
                                         echo "<td>$user_role</td>";
                                         echo "<td>$user_created_at</td>";
-                                        echo "<td><a class='btn btn-primary' href='view_users.php?change_to_admin=$user_id'>Admin</a></td>";
-                                        echo "<td><a class='btn btn-success' href='view_users.php?change_to_normal=$user_id'>Normal</a></td>";
-                                        echo "<td><a href='users.php?delete=$user_id'>Delete</a></td>";
+
+                                        echo "<td><a class='btn btn-primary' href='view_users.php?admin=$user_id'>Admin</a></td>";
+                                        echo "<td><a class='btn btn-success' href='view_users.php?normal=$user_id'>Normal</a></td>";
+                                        echo "<td><a class='btn btn-danger' href='view_users.php?delete=$user_id'>Delete</a></td>";
                                         echo "</tr>";
                                     }
                                 }
                             ?>
                         </tbody>
                     </table>
+
+                    <!-- CHANGE USER_ROLE TO ADMIN -->
+                    <?php
+                        if (isset($_GET['admin']))
+                        {
+                            $user_id= $_GET['admin'];
+                            $sql="UPDATE users SET user_role='admin' WHERE id={$user_id}";
+                            $update_query=mysqli_query($connection,$sql);
+                            confirmQuery($update_query);
+                            header("LOcation: view_users.php");
+                        }
+                    ?>
+
+                    <!-- CHANGE USER_ROLE TO NORMAL -->
+                    <?php
+                    if (isset($_GET['normal']))
+                    {
+                        $user_id= $_GET['normal'];
+                        $sql="UPDATE users SET user_role='normal' WHERE id={$user_id}";
+                        $update_query=mysqli_query($connection,$sql);
+                        confirmQuery($update_query);
+                        header("LOcation: view_users.php");
+                    }
+                    ?>
+
+                    <!-- DELETE USERS -->
+                    <?php
+                    if (isset($_GET['delete']))
+                    {
+                        $user_id= $_GET['delete'];
+                        $sql="DELETE FROM users WHERE id={$user_id}";
+                        $delete_query=mysqli_query($connection,$sql);
+                        confirmQuery($delete_query);
+                        header("LOcation: view_users.php");
+                    }
+                    ?>
 
                 </div>
             </div>
