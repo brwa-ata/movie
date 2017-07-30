@@ -51,6 +51,7 @@ function login_user($username, $password)
 
     if (password_verify($password,$db_user_password)) {
 
+        $_SESSION['user_id'] = $db_user_id;
         $_SESSION['username'] = $db_username;
         $_SESSION['gender'] = $db_user_gender;
         $_SESSION['created_at'] = $db_user_created_at;
