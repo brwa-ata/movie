@@ -40,23 +40,6 @@
                 else
                 {
                     include "admin_includes/user_things.php";
-                    if (isset($_GET['action']))
-                    {
-                        $action=$_GET['action'];
-                        switch ($action)
-                        {
-                            case 'list':
-                                $sql="";
-                                break;
-                            case 'favorite':
-                                break;
-                            case 'watchlist':
-                                break;
-                            case "review":
-                                break;
-                        }
-
-                    }
 
                 }
             }
