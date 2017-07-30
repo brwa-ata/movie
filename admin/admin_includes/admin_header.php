@@ -1,6 +1,6 @@
 <?php  ob_start(); ?>
-<?php   session_start(); ?>
-<?php include '../../includes/db_connection.php';?>
+<?php  session_start(); ?>
+<?php include '../includes/db_connection.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,6 +28,9 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- LINK BO CHARTAKAY NAW ADMIN CHNWKA EMA EMPLATE BAKAR AHENYN BOYA AM LINKA PEWYSTA -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 </head>
 
