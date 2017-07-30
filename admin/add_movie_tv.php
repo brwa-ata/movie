@@ -30,6 +30,7 @@
                                 include "admin_includes/add_movie.php";
                                 break;
                             case 'addtv':
+                                include "admin_includes/add_tv_show.php";
                                 break;
                             case 'addseason';
                                 break;
