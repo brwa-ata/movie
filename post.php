@@ -133,6 +133,42 @@
                     }
                 }
                 ?>
+                <style>
+                    .rate{
+                        color:black;
+                        cursor:pointer;
+                    }
+                    .rate:hover{
+                        color:red;
+                    }
+                    .rate-item{
+                        float:left;
+                        cursor:pointer;
+                        margin:0px 15px 0px 15px;
+                    }
+                    .rate-item:hover ~ .rate-item {
+                        color: black;
+                    }
+                </style>
+
+
+                <div class="rate">
+                    <div class="rate-item">
+<a style="text-decoration:none; color: inherit" href="countrating.php?rate=1&film_id=<?php echo $the_film_id?>&user_id=<?php echo $_SESSION['user_id']?>">☆</a>
+                    </div>
+                    <div class="rate-item">
+<a style="text-decoration:none; color: inherit" href="countrating.php?rate=2&film_id=<?php echo $the_film_id?>&user_id=<?php echo $_SESSION['user_id']?>">☆</a>
+                    </div>
+                    <div class="rate-item">
+<a style="text-decoration:none; color: inherit" href="countrating.php?rate=3&film_id=<?php echo $the_film_id?>&user_id=<?php echo $_SESSION['user_id']?>">☆</a>
+                    </div>
+                    <div class="rate-item">
+<a style="text-decoration:none; color: inherit" href="countrating.php?rate=4&film_id=<?php echo $the_film_id?>&user_id=<?php echo $_SESSION['user_id']?>">☆</a>
+                    </div>
+                    <div class="rate-item">
+<a style="text-decoration:none; color: inherit" href="countrating.php?rate=5&film_id=<?php echo $the_film_id?>&user_id=<?php echo $_SESSION['user_id']?>">☆</a>
+                    </div>
+                </div>
 
                 <h3>Released Date: <?php echo $film_released_date ?></h3>
                 <hr>
@@ -285,6 +321,7 @@
                     }
                 }
             ?>
+
         </div>
 
     </div>
