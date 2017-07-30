@@ -12,8 +12,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
+                        <?php if ($_SESSION['user_role'] == 'admin'): ?>
                         Welcome to Admin
                         <small><?php echo $_SESSION['username']; ?></small>
+                        <?php else: ?>
+                        Welcome to User
+                        <small><?php echo $_SESSION['username']; ?></small>
+                        <?php  endif; ?>
                     </h1>
 
                 </div>
@@ -39,7 +44,7 @@
                                     echo " <div class='huge'>$films_count</div>";
 
                                     ?>
-                                    <div>Posts</div>
+                                    <div>Films</div>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +72,7 @@
                                     echo "<div class='huge'>$tvshow_count</div>";
                                     ?>
 
-                                    <div>Comments</div>
+                                    <div>TV Shows</div>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +103,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="users.php">
+                        <a href="view_users.php">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
