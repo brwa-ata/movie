@@ -38,7 +38,7 @@
 
                 ?>
                 <tr>
-                    <td><?php echo $film_title; ?>  </td>
+                    <td><a href="../post.php?film_id=<?php echo $films_id; ?>"><?php echo $film_title; ?></a></td>
                     <td><?php echo $film_released_date; ?>  </td>
                     <td><?php echo $film_revenue; ?>  </td>
                     <td><?php echo $film_budget; ?>  </td>
