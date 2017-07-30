@@ -36,6 +36,9 @@
                                 break;
                             case 'addepisode':
                                 break;
+                            case 'viewfilms':
+                                include "admin_includes/vew_all_films.php";
+                                break;
                         }
                     }
                 ?>
