@@ -1,5 +1,6 @@
 <?php include "admin_includes/admin_header.php"; ?>
 <?php include 'functions.php'; ?>
+<?php include "admin_includes/admin_function.php"; ?>
 <div id="wrapper">
         <!-- Navigation -->
         <?php include "admin_includes/admin_navigation.php"; ?>
@@ -64,11 +65,19 @@
 
 
             <?php
-            if (isset($_SESSION['user_role'])) {
-                $user_role = $_SESSION['user_role'];
-                if ($user_role == 'admin')
+            if (isset($_SESSION['user_role']))
+            {
+                if (!isset($_GET['favorite']))
                 {
-                    include "admin_includes/admin_chart.php";
+                    $user_role = $_SESSION['user_role'];
+                    if ($user_role == 'admin') {
+                        include "admin_includes/admin_chart.php";
+                    }
+                }
+                if (isset($_GET['favorite']))
+                {
+                    $user_id=$_GET['favorite'];
+                    include "admin_includes/favorite.php";
                 }
             }
             ?>
