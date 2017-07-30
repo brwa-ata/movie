@@ -15,8 +15,8 @@ if (isset($_POST['submit']))
 
         $password=password_hash($password, PASSWORD_DEFAULT, array('cost'=>10) );
 
-        $query="INSERT INTO users(username,password,gender,created_at) 
-                    VALUES ('$username','$password','$gender',now())";
+        $query="INSERT INTO users(username,password,gender,created_at, user_role) 
+                    VALUES ('$username','$password','$gender',now(),'normal')";
         $register_user=mysqli_query($connection,$query);
         if (!$register_user)
         {
