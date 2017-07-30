@@ -165,13 +165,21 @@
             <?php }
             } // END OF FIRST IF  IF(ISSET($_GET['film_id']))
             ?>
+        </div> <!-- END OF SHOW FILMS -->
 
-        </div>
+
+
+        <!-- SHOW TV SHOWS -->
         <div class="col-md-8">
             <?php
                 if (isset($_GET['tvshow_id']))
                 {
                     $the_tvshow_id=$_GET['tvshow_id'];
+
+                    $sql = "UPDATE tv_shows SET popularity= popularity +1 WHERE id=$the_tvshow_id ";
+                    $popularity = mysqli_query($connection, $sql);
+                    confirmQuery($sql);
+
 
                     $sql="SELECT * FROM tv_shows WHERE id = $the_tvshow_id";
                     $show_tvshow=mysqli_query($connection,$sql);
@@ -186,7 +194,7 @@
                         <img class="img-responsive" src="images/GOTH/<?php  echo $show_image; ?>" > <hr>
                         <h3> Overview </h3>
                         <?php echo $show_overview; ?><br><br>
-                        <a  class="btn btn-primary" href="seasons.php?view_season=<?php echo $the_tvshow_id; ?>">View all season <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a  class="btn btn-primary" href="seasons.php?tvshow_id=<?php echo $the_tvshow_id; ?>">View all season <span class="glyphicon glyphicon-chevron-right"></span></a>
             <?php
                     }
                 }
