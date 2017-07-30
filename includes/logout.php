@@ -3,10 +3,9 @@
 <?php
 
 $_SESSION['username']=null; // batal krdnaway session yan cancel krdny session
-$_SESSION['firstname']=null;
-$_SESSION['lastname']=null;
+$_SESSION['user_id']=null;
 $_SESSION['user_role']=null;
 
-header("Location: ../index.php");
+header("Location: ../includes/header.php?destroy=session");
 
 ?>
