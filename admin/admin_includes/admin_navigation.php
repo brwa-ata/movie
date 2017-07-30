@@ -16,7 +16,9 @@
         </li>
 
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
+                <?php echo $_SESSION['username']; ?>
+                <b class="caret"></b></a>
             <ul class="dropdown-menu">
 
                 <li>
@@ -33,7 +35,7 @@
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-            <li>
+            <li class="active">
                 <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
 
@@ -56,7 +58,7 @@
                 <a href="add_movie_tv.php?order=addmovie"><i class="fa fa-fw fa-edit"></i> Add Movie</a>
             </li>
             <li>
-                <a href="tables.html"><i class="fa fa-fw fa-table"></i> View all users</a>
+                <a href="view_users.php"><i class="fa fa-fw fa-table"></i> View all users</a>
             </li>
             <li>
                 <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
@@ -65,9 +67,6 @@
                 <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
             </li>
 
-            <li class="active">
-                <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-            </li>
             <li>
                 <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
             </li>
