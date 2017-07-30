@@ -35,24 +35,33 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> TV Shows <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> All</a>
+                            <a href="tvshow_category.php?category=popular"><i class="fa fa-fw fa-user"></i> Popular</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Popular</a>
+                            <a href="tvshow_category.php?category=toprate"><i class="fa fa-fw fa-envelope"></i> Top Rated</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Top Rated</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-gear"></i> On TV</a>
+                            <a href="tvshow_category.php?category=ontv"><i class="fa fa-fw fa-gear"></i> On TV</a>
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i>Airing Today</a>
+                            <a href="tvshow_category.php?category=airingtoday"><i class="fa fa-fw fa-power-off"></i>Airing Today</a>
                         </li>
                     </ul>
+                </li>
+                <li>
+                    <a href="registration.php">Registration</a>
+                </li>
+                <?php  if(isset($_SESSION['user_role']) == 'admin'):  ?>
+                    <li>
+                        <a href="/Movie/admin">Admin</a>
+                    </li>
+
+                <?php endif;  ?>
+
+                <li>
+                    <a href="loginform.php">Login</a>
                 </li>
             </ul>
         </div>
