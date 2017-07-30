@@ -66,8 +66,20 @@
             <li>
                 <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
             </li>
+
             <li>
-                <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#users_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Activities <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="users_dropdown" class="collapse">
+                    <li>
+                        <a href="index.php?favorite=<?php echo $_SESSION['user_id']; ?>"> Favorites</a>
+                    </li>
+                    <li>
+                        <a href="index.php?watchlist=<?php echo $_SESSION['user_id']; ?>"> Watchlist</a>
+                    </li>
+                    <li>
+                        <a href="#"> Lists</a>
+                    </li>
+                </ul>
             </li>
 
             <li>
