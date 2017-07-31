@@ -49,6 +49,9 @@
                             case 'viewfilms':
                                 include "admin_includes/vew_all_films.php";
                                 break;
+                            case 'viewtvshow':
+                                include "admin_includes/view_all_tvshows.php";
+                                break;
                         }
                     }
                 ?>
