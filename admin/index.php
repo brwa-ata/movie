@@ -50,7 +50,7 @@
             <?php
             if (isset($_SESSION['user_role']))
             {
-                if (!isset($_GET['favorite']) && !isset($_GET['watchlist']) && !isset($_GET['rating_review']) && !isset($_GET['lists']) && !isset($_GET['create_list']))
+if (!isset($_GET['favorite']) && !isset($_GET['watchlist']) && !isset($_GET['rating_review']) && !isset($_GET['lists']) && !isset($_GET['create_list']) && !isset($_GET['image_list']))
                 {
                     $user_role = $_SESSION['user_role'];
                     if ($user_role == 'admin') {
@@ -80,7 +80,27 @@
                 {
                     include "admin_includes/create_new_list.php";
                 }
+                if (isset($_GET['image_list']) && isset($_GET['list_name']))
+                {
+                    include "admin_includes/show_list_content.php";
+                }
             }
+            ?>
+
+            <!-- DELETE LISTS -->
+            <?php
+                if (isset($_GET['delete_list_name']))
+                {
+
+                    $list_name=$_GET['delete_list_name'];
+                    $query="DELETE FROM lists WHERE lists.listname='$list_name'";
+                    $excute=mysqli_query($connection,$query);
+                    if (!$excute)
+                    {
+                        die("QUERY FAILED ". mysqli_error($connection));
+                    }
+
+                }
             ?>
 
         </div>
