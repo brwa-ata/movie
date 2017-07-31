@@ -1,5 +1,5 @@
 <div class="col-md-6">
-    <a class=" btn btn-success" href="index.php?create_list">Create new list</a>
+    <a class=" btn btn-success" href="index.php?create_list=<?php echo $_SESSION['user_id'];?>">Create new list</a>
     <?php
         $sql="SELECT lists.listname,lists.list_image FROM lists
               INNER JOIN users ON users.id=lists.users_id
