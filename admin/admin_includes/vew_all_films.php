@@ -131,11 +131,13 @@
                             </tr>
                         </table>
                     </td>
+                    <?php
+                    echo "<td><a class='btn btn-danger' href='add_movie_tv.php?delete=$films_id'>Delete</a></td>";
+                    ?>
                 </tr>
                 <?php
             }
         ?>
-
 
     </tbody>
 </table>
