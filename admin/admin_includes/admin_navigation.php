@@ -83,7 +83,7 @@
             </li>
 
             <li>
-                <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
+                <a href="index.php?rating_review=<?php echo $_SESSION['user_id']; ?>"><i class="fa fa-fw fa-dashboard"></i> Rating & Review</a>
             </li>
         </ul>
     </div>
