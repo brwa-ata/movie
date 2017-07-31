@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            <a href="comments.php">
+            <a href="add_movie_tv.php?order=viewtvshow">
                 <div class="panel-footer">
                     <span class="pull-left">View All TV Shows</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
