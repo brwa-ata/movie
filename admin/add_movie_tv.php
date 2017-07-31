@@ -21,8 +21,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Blank Page
-                            <small>Subheading</small>
+                            Welcome to Admin
+                            <small><?php echo $_SESSION['username']; ?></small>
                         </h1>
                     </div>
                 </div>
@@ -52,7 +52,18 @@
                         }
                     }
                 ?>
+                <?php
 
+                if (isset($_GET['delete']))
+                {
+
+                    $the_film_id=$_GET['delete'];
+                    $sql2="DELETE FROM films WHERE id={$the_film_id}";
+                    $delete_film=mysqli_query($connection,$sql2);
+                    include "admin_includes/vew_all_films.php";
+                }
+
+                ?>
 
             </div>
             <!-- /.container-fluid -->
