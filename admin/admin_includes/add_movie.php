@@ -2,7 +2,7 @@
 <?php
     if (isset($_POST['add_film']))
     {
-        if (!empty($_POST['film_title']) && !empty($_POST['film_budget']))
+        if (!empty($_POST['film_title']))
         {
             $film_title = $_POST['film_title'];
             $film_overview = $_POST['film_overview'];
