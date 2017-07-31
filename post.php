@@ -16,7 +16,7 @@
     <div class="row">
 
         <!-- Blog Entries Column -->
-        <div class="col-md-8">
+        <div class="col-md-7">
 
             <?php
                 if (isset($_GET['film_id']))
@@ -172,10 +172,33 @@
 
                 ?>
             </h3>
+        </div><br><br><br>
+
+
+        <div class="col-md-5">
+            <h3> Movie Trailer </h3>
+            <?php
+                $triler_query="SELECT * FROM film_trailer INNER JOIN films ON films.id=film_trailer.film_id
+                               WHERE films.id={$the_film_id}";
+                $show_triler=mysqli_query($connection,$triler_query);
+                confirmQuery($show_triler);
+                while ($ro=mysqli_fetch_assoc($show_triler))
+                {
+                    $film_trailer=$ro['film_trailer'];
+            ?>
+                     <video width="100%" height="100%" src="videos/<?php echo $film_trailer; ?>" controls></video>
+                    <hr>
+            <?php
+                }
+            ?>
+
+
         </div>
 
     </div>
     <!-- /.row -->
+
+
 
     <hr>
     <div class="row">
