@@ -67,6 +67,17 @@
                           VALUES ('$film_language', $new_film_id)";
             $insert_language=mysqli_query($connection,$lang_query);
 
+            // ADD A TRAILER
+            $film_trailer = $_FILES['trailer']['name'];
+            $temp_film_trailer=$_FILES['trailer']['tmp_name'];
+            move_uploaded_file($temp_film_backdrop,"../videos/$film_trailer");
+
+            $triler_query="INSERT INTO film_trailer (film_trailer,film_id)
+                           VALUES ('$film_trailer',$new_film_id)";
+            $upload_triler=mysqli_query($connection,$triler_query);
+            confirmQuery($upload_triler);
+
+
     }// END OF INSERTION
 
 
@@ -172,6 +183,11 @@
     <div class="form-group">
         <label for="user_image">Choose Film Poster</label>
         <input type="file" name="film_poster">
+    </div>
+
+    <div class="form-group">
+        <label for="trailer">Add a trailer</label>
+        <input type="file" name="trailer">
     </div>
 
     <div class="form-group">
