@@ -65,6 +65,13 @@
                     $delete_film=mysqli_query($connection,$sql2);
                     include "admin_includes/vew_all_films.php";
                 }
+                if (isset($_GET['delete_tv']))
+                {
+                    $the_tvshow_id=$_GET['delete_tv'];
+                    $sql3="DELETE FROM tv_shows WHERE id={$the_tvshow_id}";
+                    $delete_tvshow=mysqli_query($connection,$sql3);
+                    include "admin_includes/view_all_tvshows.php";
+                }
 
                 ?>
 
