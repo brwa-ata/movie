@@ -50,7 +50,7 @@
             <?php
             if (isset($_SESSION['user_role']))
             {
-                if (!isset($_GET['favorite']) && !isset($_GET['watchlist']))
+                if (!isset($_GET['favorite']) && !isset($_GET['watchlist']) && !isset($_GET['rating_review']))
                 {
                     $user_role = $_SESSION['user_role'];
                     if ($user_role == 'admin') {
@@ -66,6 +66,11 @@
                 {
                     $the_user_id=$_GET['watchlist'];
                     include "admin_includes/watchlists.php";
+                }
+                if (isset($_GET['rating_review']))
+                {
+                    $rate_user_id=$_GET['rating_review'];
+                    include "admin_includes/rating_and_review.php";
                 }
             }
             ?>
