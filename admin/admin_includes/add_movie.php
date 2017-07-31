@@ -64,7 +64,7 @@
             //INSERT LANGUAGE
             $film_language=$_POST['film_language'];
             $lang_query="INSERT INTO language (language_name, films_id)
-                          VALUES ('$lang_language', $new_film_id)";
+                          VALUES ('$film_language', $new_film_id)";
             $insert_language=mysqli_query($connection,$lang_query);
 
     }// END OF INSERTION
