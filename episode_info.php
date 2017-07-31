@@ -48,6 +48,56 @@
                     ?>
                     <h3><?php echo $episode_number; ?> <?php echo $episode_name; ?> </h3>
                     <img  class="img-responsive" src="images/GOTH/<?php echo $episode_image; ?> ">
+
+
+                    <?php  include "includes/epo_watch_and_fav.php"?>
+
+                    <style>
+                        .rate{
+                            color:black;
+                            cursor:pointer;
+                        }
+                        .rate:hover{
+                            color:red;
+                        }
+                        .rate-item{
+                            float:left;
+                            cursor:pointer;
+                            margin:0px 15px 0px 15px;
+                        }
+                        .rate-item:hover ~ .rate-item {
+                            color: black;
+                        }
+                    </style>
+
+                    <?php
+                    if (isset($_SESSION['user_id']))
+                    {
+
+                        ?>
+
+                        <div class="rate">
+                            <div class="rate-item">
+<a style="text-decoration:none; color: inherit" href="epo_countrating.php?rate=1&episode_id=<?php echo $the_episode_id?>&user_id=<?php echo $_SESSION['user_id']?>&season_id=<?php echo $the_season_id;?>&tv_id=<?php echo $the_tvshow_id?>">☆</a>
+                            </div>
+                            <div class="rate-item">
+<a style="text-decoration:none; color: inherit" href="epo_countrating.php?rate=2&episode_id=<?php echo $the_episode_id?>&user_id=<?php echo $_SESSION['user_id']?>&season_id=<?php echo $the_season_id;?>&tv_id=<?php echo $the_tvshow_id?>">☆</a>
+                            </div>
+                            <div class="rate-item">
+<a style="text-decoration:none; color: inherit" href="epo_countrating.php?rate=3&episode_id=<?php echo $the_episode_id?>&user_id=<?php echo $_SESSION['user_id']?>&season_id=<?php echo $the_season_id;?>&tv_id=<?php echo $the_tvshow_id?>">☆</a>
+                            </div>
+                            <div class="rate-item">
+<a style="text-decoration:none; color: inherit" href="epo_countrating.php?rate=4&episode_id=<?php echo $the_episode_id?>&user_id=<?php echo $_SESSION['user_id']?>&season_id=<?php echo $the_season_id;?>&tv_id=<?php echo $the_tvshow_id?>">☆</a>
+                            </div>
+                            <div class="rate-item">
+<a style="text-decoration:none; color: inherit" href="epo_countrating.php?rate=5&episode_id=<?php echo $the_episode_id?>&user_id=<?php echo $_SESSION['user_id']?>&season_id=<?php echo $the_season_id;?>&tv_id=<?php echo $the_tvshow_id?>">☆</a>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+
+                    <hr>
                     <h4>Overview </h4>
                     <?php echo $episode_overview; ?><hr>
                     <h4>Released_date: <?php echo $episode_released_date ?></h4><hr>
