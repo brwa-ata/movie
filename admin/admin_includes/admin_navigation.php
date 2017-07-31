@@ -77,7 +77,7 @@
                         <a href="index.php?watchlist=<?php echo $_SESSION['user_id']; ?>"> Watchlist</a>
                     </li>
                     <li>
-                        <a href="#"> Lists</a>
+                        <a href="index.php?lists=<?php echo $_SESSION['user_id']; ?>"> Lists</a>
                     </li>
                 </ul>
             </li>
