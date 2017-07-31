@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-            <a href="index.php?action=list">
+            <a href="index.php?lists=<?php echo $_SESSION['user_id']; ?>">
                 <div class="panel-footer">
                     <span class="pull-left">View Lists</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
