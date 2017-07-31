@@ -50,7 +50,7 @@
             <?php
             if (isset($_SESSION['user_role']))
             {
-                if (!isset($_GET['favorite']) && !isset($_GET['watchlist']) && !isset($_GET['rating_review']) && !isset($_GET['lists']))
+                if (!isset($_GET['favorite']) && !isset($_GET['watchlist']) && !isset($_GET['rating_review']) && !isset($_GET['lists']) && !isset($_GET['create_list']))
                 {
                     $user_role = $_SESSION['user_role'];
                     if ($user_role == 'admin') {
@@ -76,7 +76,10 @@
                 {
                     include "admin_includes/lists.php";
                 }
-
+                if (isset($_GET['create_list']))
+                {
+                    include "admin_includes/create_new_list.php";
+                }
             }
             ?>
 
