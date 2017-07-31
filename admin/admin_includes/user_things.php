@@ -82,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <a href="categories.php">
+            <a href="index.php?rating_review=<?php echo $_SESSION['user_id']; ?>">
                 <div class="panel-footer">
                     <span class="pull-left">View Rating&Overview</span>
                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
