@@ -24,8 +24,8 @@
         <tbody>
         <?php
         $query="SELECT films.id AS 'film_id', films.video_title, rating.rated  FROM films 
-                                INNER JOIN rating ON  films.id=rating.film_id
-                                WHERE rating.user_id={$rate_user_id}";
+                INNER JOIN rating ON  films.id=rating.film_id
+                WHERE rating.user_id={$rate_user_id}";
         $fav_table=mysqli_query($connection,$query);
         confirmQuery($fav_table);
         while ($row=mysqli_fetch_assoc($fav_table))
@@ -36,7 +36,7 @@
 
             ?>
             <tr>
-                <td><a href="../post.php?film_id=<?php echo $film_id;?>"><?php echo $film_title; ?></a></td>
+                <td><a href="../film<?php echo $film_id;?>"><?php echo $film_title; ?></a></td>
                 <td><?php echo $film_rating; ?></td>
             </tr>
             <?php

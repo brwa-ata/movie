@@ -75,11 +75,11 @@
             {
                 if ($i == $page)// ama wata bo aw pageay ka tyayayn
                 {
-                    echo "<li><a  href='popular.php?page=$i'> $i </a></li>";
+                    echo "<li><a  href='popular$i'> $i </a></li>";
                 }
                 else
                 {
-                    echo "<li><a href='popular.php?page=$i'>$i</a></li>";
+                    echo "<li><a href='popular$i'>$i</a></li>";
                 }
             }
             ?>

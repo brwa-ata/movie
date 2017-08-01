@@ -7,12 +7,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">Admin Office</a>
+        <a class="navbar-brand" href="index">Admin Office</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
         <li class="dropdown">
-            <a href="../index.php"  >Home </a>
+            <a href="../index"  >Home </a>
         </li>
 
         <li class="dropdown">
@@ -22,7 +22,7 @@
             <ul class="dropdown-menu">
 
                 <li>
-                    <a href="edit_profile.php"><i class="fa fa-fw fa-user"></i> Edit Profile</a>
+                    <a href="edit_profile"><i class="fa fa-fw fa-user"></i> Edit Profile</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
@@ -39,7 +39,7 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
             <li class="active">
-                <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                <a href="index"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
 
             <li>
@@ -71,19 +71,19 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#users_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Activities <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="users_dropdown" class="collapse">
                     <li>
-                        <a href="index.php?favorite=<?php echo $_SESSION['user_id']; ?>"> Favorites</a>
+                        <a href="/Movie/admin/favorite<?php echo $_SESSION['user_id']; ?>"> Favorites</a>
                     </li>
                     <li>
-                        <a href="index.php?watchlist=<?php echo $_SESSION['user_id']; ?>"> Watchlist</a>
+                        <a href="/Movie/admin/watchlist<?php echo $_SESSION['user_id']; ?>"> Watchlist</a>
                     </li>
                     <li>
-                        <a href="index.php?lists=<?php echo $_SESSION['user_id']; ?>"> Lists</a>
+                        <a href="/Movie/admin/lists<?php echo $_SESSION['user_id']; ?>"> Lists</a>
                     </li>
                 </ul>
             </li>
 
             <li>
-                <a href="index.php?rating_review=<?php echo $_SESSION['user_id']; ?>"><i class="fa fa-fw fa-dashboard"></i> Rating & Review</a>
+                <a href="/Movie/admin/rating_and_review<?php echo $_SESSION['user_id']; ?>"><i class="fa fa-fw fa-dashboard"></i> Rating & Review</a>
             </li>
         </ul>
     </div>

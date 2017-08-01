@@ -2,7 +2,7 @@
 
     <!-- Blog Search Well -->
     <div class="well">
-        <form action="../Movie/search.php" method="post"><!-- am actiona wata har yatawa naw xoy -->
+        <form action="../Movie/search" method="post"><!-- am actiona wata har yatawa naw xoy -->
 
             <div class="input-group">
                 <input name="search" type="text" class="form-control" placeholder="Search for Movies or TV Shows ... ">

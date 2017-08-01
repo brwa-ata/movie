@@ -1,3 +1,4 @@
+<!-- FOR MOVIE -->
 <?php // INSERT AND DELETE FAVORITE
 if (isset($_POST['favorite']))
 {

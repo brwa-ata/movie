@@ -76,11 +76,11 @@
             {
                 if ($i == $page)// ama wata bo aw pageay ka tyayayn
                 {
-                    echo "<li><a  href='upcoming.php?page=$i'> $i </a></li>";
+                    echo "<li><a  href='upcoming$i'> $i </a></li>";
                 }
                 else
                 {
-                    echo "<li><a href='upcoming.php?page=$i'>$i</a></li>";
+                    echo "<li><a href='upcoming$i'>$i</a></li>";
                 }
             }
             ?>

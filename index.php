@@ -56,10 +56,10 @@
 
                 ?>
 
-                        <h2> <a href="post.php?film_id=<?php echo $film_id?>"><?php echo $film_title; ?></a> <?php echo "($film_released_date)"; ?> </h2>
+                        <h2> <a href="film<?php echo $film_id?>"><?php echo $film_title; ?></a> <?php echo "($film_released_date)"; ?> </h2>
 
-                        <a href="post.php?film_id=<?php echo $film_id?>"> <img class="img-responsive" src="images/<?php  echo $film_image; ?>" ></a> <hr>
-                        <a  class="btn btn-primary" href="post.php?film_id=<?php echo $film_id?>">More info <span class="glyphicon glyphicon-chevron-right"></span></a><hr>
+                        <a href="film<?php echo $film_id?>"> <img class="img-responsive" src="images/<?php  echo $film_image; ?>" ></a> <hr>
+                        <a  class="btn btn-primary" href="film<?php echo $film_id?>">More info <span class="glyphicon glyphicon-chevron-right"></span></a><hr>
                 <?php
                     }
                 ?>
@@ -82,9 +82,9 @@
                         $show_title=$row2['tvshow_title'];
                         $show_image=$row2['image'];
                 ?>
-                <h2> <a href="post.php?tvshow_id=<?php echo $tvshow_id?>"><?php echo $show_title; ?></a> </h2>
-                <a href="post.php?tvshow_id=<?php echo $tvshow_id?>"> <img class="img-responsive" src="images/GOTH/<?php  echo $show_image; ?>" ></a> <hr>
-                <a  class="btn btn-primary" href="post.php?tvshow_id=<?php echo $tvshow_id?>">More info <span class="glyphicon glyphicon-chevron-right"></span></a><hr>
+                <h2> <a href="tvshow<?php echo $tvshow_id?>"><?php echo $show_title; ?></a> </h2>
+                <a href="tvshow<?php echo $tvshow_id?>"> <img class="img-responsive" src="images/GOTH/<?php  echo $show_image; ?>" ></a> <hr>
+                <a  class="btn btn-primary" href="tvshow<?php echo $tvshow_id?>">More info <span class="glyphicon glyphicon-chevron-right"></span></a><hr>
                 <?php
                     }
                 ?>
@@ -104,11 +104,11 @@
             {
                 if ($i == $page)// ama wata bo aw pageay ka tyayayn
                 {
-                    echo "<li><a  href='index.php?page=$i'> $i </a></li>";
+                    echo "<li><a  href='page$i'> $i </a></li>";
                 }
                 else
                 {
-                    echo "<li><a href='index.php?page=$i'>$i</a></li>";
+                    echo "<li><a href='page$i'>$i</a></li>";
                 }
             }
             ?>

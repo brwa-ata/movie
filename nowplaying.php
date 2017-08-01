@@ -72,11 +72,11 @@
             {
                 if ($i == $page)// ama wata bo aw pageay ka tyayayn
                 {
-                    echo "<li><a  href='nowplaying.php?page=$i'> $i </a></li>";
+                    echo "<li><a  href='nowplaying$i'> $i </a></li>";
                 }
                 else
                 {
-                    echo "<li><a href='nowplaying.php?page=$i'>$i</a></li>";
+                    echo "<li><a href='nowplaying.$i'>$i</a></li>";
                 }
             }
             ?>
