@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Home</a>
+            <a class="navbar-brand" href="/Movie">Home</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -17,17 +17,17 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>Movies <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="popular.php"><i class="fa fa-fw fa-user"></i> Popular</a>
+                            <a href="popular"><i class="fa fa-fw fa-user"></i> Popular</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Top Rated</a>
+                            <a href="toprated"><i class="fa fa-fw fa-envelope"></i> Top Rated</a>
                         </li>
                         <li>
-                            <a href="upcoming.php"><i class="fa fa-fw fa-gear"></i> Upcoming</a>
+                            <a href="upcoming"><i class="fa fa-fw fa-gear"></i> Upcoming</a>
                         </li>
 
                         <li>
-                            <a href="nowplaying.php"><i class="fa fa-fw fa-power-off"></i> Now Playing</a>
+                            <a href="nowplaying"><i class="fa fa-fw fa-power-off"></i> Now Playing</a>
                         </li>
                     </ul>
                 </li>
@@ -36,7 +36,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> TV Shows <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="tvshow_category.php?category=popular"><i class="fa fa-fw fa-user"></i> Popular</a>
+                            <a href="tvshow_category/popular"><i class="fa fa-fw fa-user"></i> Popular</a>
                         </li>
                         <li>
                             <a href="tvshow_category.php?category=toprate"><i class="fa fa-fw fa-envelope"></i> Top Rated</a>
@@ -51,14 +51,14 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="registration.php">Registration</a>
+                    <a href="registration">Registration</a>
                 </li>
                 <?php
                     if(!isset($_SESSION['user_role']))
                     {
                 ?>
                         <li>
-                            <a href="loginform.php">Login</a>
+                            <a href="loginform">Login</a>
                         </li>
                 <?php
                     }
