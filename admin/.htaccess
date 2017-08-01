@@ -1,0 +1,15 @@
+RewriteEngine on
+
+RewriteRule ^(index|edit_profile|view_users)$ $1.php [NC,L]
+
+RewriteRule ^add_movie_tv/(\d+)$ add_movie_tv.php?order=$1 [NC,L]
+
+RewriteRule ^favorite(\d+)$ index.php?favorite=$1 [NC,L]
+
+RewriteRule ^watchlist(\d+)$ index.php?watchlist=$1 [NC,L]
+
+RewriteRule ^lists(\d+)$ index.php?lists=$1 [NC,L]
+
+RewriteRule ^create_list(\d+)$ index.php?create_list=$1 [NC,L]
+
+RewriteRule ^rating_and_review(\d+)$ index.php?rating_review=$1 [NC,L]
