@@ -1,0 +1,13 @@
+RewriteEngine on
+
+RewriteRule ^(index|registration|post|loginform|upcoming|nowplaying|popular|search|toprated)$ $1.php [NC,L]
+
+RewriteRule ^film(\d+)$ post.php?film_id=$1 [NC,L]
+
+RewriteRule ^tvshow(\d+)$ post.php?tvshow_id=$1 [NC,L]
+
+RewriteRule ^seasons@(\d+)$ seasons.php?tvshow_id=$1 [NC,L]
+
+RewriteRule ^toprate(\d+)$ toprated.php?page=$1 [NC,L]
+
+RewriteRule ^page(\d+)$ index.php?page=$1 [NC,L]
