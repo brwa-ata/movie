@@ -75,6 +75,31 @@
 VALUES ('$episode_name','$episode_number',{$new_season_id},'$episode_released_date',{$episode_revenue},{$episode_budget},'$episode_overview','$episode_image',{$episode_duration})";
             $insert_episode=mysqli_query($connection,$episode_query);
             confirmQuery($insert_episode);
+            
+            
+            // INSERT EPISODE's BACKDROP AND POSTER
+            $episode_backdrop = $_FILES['episode_backdrop']['name'];
+            $temp_episode_backdrop=$_FILES['episode_backdrop']['tmp_name'];
+            $episode_poster = $_FILES['episode_poster']['name'];
+            $temp_episode_poster=$_FILES['episode_poster']['tmp_name'];
+
+            $new_episode_id=mysqli_insert_id($connection);
+            move_uploaded_file($temp_episode_backdrop,"../images/tvshows/$episode_backdrop");
+            move_uploaded_file($temp_episode_poster,"../images/tvshows/$episode_poster");
+
+            $images_query="INSERT INTO episode_images (episode_backdrop, episode_posterl , episode_id)
+                            VALUES ('$episode_backdrop' , '$episode_poster' , $new_episode_id)";
+            $insert_images=mysqli_query($connection,$images_query);
+            confirmQuery($insert_images);
+
+
+            //INSERT LANGUAGE
+            $episode_language=$_POST['episode_language'];
+            $lang_query="INSERT INTO language (language_name, episode_id)
+                          VALUES ('$episode_language', $new_episode_id)";
+            $insert_language=mysqli_query($connection,$lang_query);
+            confirmQuery($insert_language);
+            
 
 
             // INPUT GENRE TYPE
@@ -105,28 +130,7 @@ VALUES ('$episode_name','$episode_number',{$new_season_id},'$episode_released_da
 
             }
 
-            // INSERT EPISODE's BACKDROP AND POSTER
-            $episode_backdrop = $_FILES['episode_backdrop']['name'];
-            $temp_episode_backdrop=$_FILES['episode_backdrop']['tmp_name'];
-            $episode_poster = $_FILES['episode_poster']['name'];
-            $temp_episode_poster=$_FILES['episode_poster']['tmp_name'];
 
-            $new_episode_id=mysqli_insert_id($connection);
-            move_uploaded_file($temp_episode_backdrop,"../images/tvshows/$episode_backdrop");
-            move_uploaded_file($temp_episode_poster,"../images/tvshows/$episode_poster");
-
-            $images_query="INSERT INTO episode_images (episode_backdrop, episode_posterl , episode_id)
-                            VALUES ('$episode_backdrop' , '$episode_poster' , $new_episode_id)";
-            $insert_images=mysqli_query($connection,$images_query);
-            confirmQuery($insert_images);
-
-
-            //INSERT LANGUAGE
-            $episode_language=$_POST['episode_language'];
-            $lang_query="INSERT INTO language (language_name, episode_id)
-                          VALUES ('$episode_language', $new_episode_id)";
-            $insert_language=mysqli_query($connection,$lang_query);
-            confirmQuery($insert_language);
 
 
         }
